@@ -6,7 +6,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/yourusername/your-repo.git'
+                git 'https://github.com/mullafurqan/Devops-intern-Elavatelabs-task-2.git
+'
             }
         }
         stage('Build Docker Image') {
