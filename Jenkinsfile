@@ -1,33 +1,31 @@
 pipeline {
     agent any
-    environment {
-        IMAGE_NAME = "myapp:latest"
-    }
+
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/yourusername/your-repo.git'
+                // ✅ Use proper single-line string for the URL
+                git branch: 'main', url: 'https://github.com/mullafurqan/Devops-intern-Elavatelabs-task-2.git'
             }
         }
+
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build("${IMAGE_NAME}")
+                    sh 'docker build -t myapp:latest .'
                 }
             }
         }
+
         stage('Test') {
             steps {
-                echo "Running tests..."
-                sh 'echo "No tests yet!"'
+                echo 'Running tests...'
             }
         }
+
         stage('Deploy') {
             steps {
-                script {
-                    sh 'docker rm -f myapp || true'
-                    sh 'docker run -d -p 3000:3000 --name myapp ${IMAGE_NAME}'
-                }
+                echo 'Deploying application...'
             }
         }
     }
