@@ -6,6 +6,8 @@ app.get('/', (req, res) => {
   res.send('🚀 Hello from Jenkins CI/CD Pipeline running on EC2!');
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+const port = 3000;
+
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server running on http://0.0.0.0:${port}`);
 });
