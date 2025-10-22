@@ -136,7 +136,7 @@ Jenkins → New Item → Pipeline → OK
 
 Definition: Pipeline script from SCM
 
-SCM: Git → Repo URL: https://github.com/yourusername/your-repo.git
+SCM: Git → Repo URL:https://github.com/mullafurqan/Devops-intern-Elavatelabs-task-2
 
 Branch: main
 
