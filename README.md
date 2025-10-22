@@ -172,3 +172,5 @@ Run tests
 Deploy container on EC2
 
 Browser → http://<EC2_PUBLIC_IP>:3000 ✅
+## The output will display as:
+![App Output](https://github.com/mullafurqan/Devops-intern-Elavatelabs-task-2/blob/main/Screenshot%20of%20output%20%202025-10-22%20111254.png?raw=true)
